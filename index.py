@@ -1,17 +1,15 @@
-
-import hangman_art
-import hangman_words
+from hangman_words import word_list
 import random
 
 
-chosen_word = random.choice(hangman_words.word_list)
+chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
 
 end_of_game = False
 lives = 6
 
-
-print(hangman_art.logo)
+from hangman_art import logo
+print(logo)
 
 print(f'Pssst, the solution is {chosen_word}.')
 
@@ -49,5 +47,5 @@ while not end_of_game:
         end_of_game = True
         print("You win.")
 
-
-    print(hangman_art.stages[lives])
+    from hangman_art import stages 
+    print(stages[lives])
